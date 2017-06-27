@@ -5,7 +5,7 @@ class RunsController < ApplicationController
 
 
   def index
-    @runs = Run.where(user_id: current_user&.id).order(date: :desc)
+    @runs = current_user&.runs
   end
 
   def new
@@ -39,6 +39,18 @@ class RunsController < ApplicationController
 
 
   private
+
+  #Check if run exists
+  def authenticate_run
+    @run = Run.find_by(id: params[:id])
+    redirect_unauthorized if @run.nil?
+  end
+
+  #Check if run belongs to current user
+  def authenticate_correct_user
+    redirect_unauthorized unless current_user? @run.user_id
+  end
+
   #Allowed parameter for Run model
   def run_params
     params.require(:run).permit(:distance, :duration, :date)
