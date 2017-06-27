@@ -35,9 +35,16 @@ gem 'devise'
 #Bootstrap for style
 gem 'bootstrap-sass', '~> 3.3.6'
 
-#Semantic forms for nicer style
-gem 'formtastic'
+#Pagination
+gem 'will_paginate', '~> 3.1.5'
+gem 'bootstrap-will_paginate'
 
+#For better tables
+gem 'jquery-datatables-rails'
+
+#Date time pickers
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

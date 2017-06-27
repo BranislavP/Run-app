@@ -8,7 +8,7 @@ module RunsHelper
 
   #Check if run belongs to current user
   def authenticate_correct_user
-    redirect_unauthorized unless current_user.id == @run.user_id
+    redirect_unauthorized unless current_user? @run.user_id
   end
 
 end

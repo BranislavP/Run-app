@@ -11,11 +11,3 @@ User.create email: 'brano@gmail.com', password: '123456', password_confirmation:
 15.times do
   Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
 end
-
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1
-Run.create distance: 2, duration: Time.now, date: Time.now, user_id: 1

@@ -1,23 +1,20 @@
-<div class="container">
-  <%= form_for @run, class: 'form', method: method do |f| %>
+  <%= form_for @run, class: 'form-group', method: method do |f| %>
       <%= form_errors_for @run %>
 
-      <div class="form-group">
-        <%= f.label :distance, 'Distance' %>
-        <%= f.number_field :distance, required: true, class: 'form-control' %>
+      <div class="input-group">
+        <%= f.label :distance, 'Distance (in km)' %>
+        <%= f.number_field :distance, value: 0, step: :any, required: true, class: 'form-control' %>
       </div>
 
-      <div class="form-group">
+      <div class='input-group date'>
         <%= f.label :duration, 'Duration' %>
-        <%= f.time_select :duration, required: true, include_seconds: true, class: 'form-control' %>
+        <%= f.text_field :duration, required: true, class: 'form-control', id: 'time-picker' %>
       </div>
 
-      <div class="form-group">
+      <div class='input-group date'>
         <%= f.label :date %>
-        <%= f.datetime_select :date, required: true, class: 'form-control' %>
+        <%= f.text_field :date, required: true, class: 'form-control', id: 'datetime-picker' %>
       </div>
 
-      <%= f.submit submit, class: 'btn btn-primary' %>
+      <%= f.submit submit, class: 'btn btn-primary pull-left' %>
   <% end %>
-
-</div>

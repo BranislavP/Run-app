@@ -13,5 +13,6 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 @import "custom";
-@import "formtastic";
+@import "dataTables/bootstrap/3/jquery.dataTables.bootstrap";
