@@ -1,0 +1,23 @@
+<div class="container">
+  <%= form_for @run, class: 'form', method: method do |f| %>
+      <%= form_errors_for @run %>
+
+      <div class="form-group">
+        <%= f.label :distance, 'Distance' %>
+        <%= f.number_field :distance, required: true, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :duration, 'Duration' %>
+        <%= f.time_select :duration, required: true, include_seconds: true, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :date %>
+        <%= f.datetime_select :date, required: true, class: 'form-control' %>
+      </div>
+
+      <%= f.submit submit, class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

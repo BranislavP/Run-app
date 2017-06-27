@@ -1,0 +1,6 @@
+<tr>
+  <td><%= run.distance %></td>
+  <td><%= run.duration.strftime('%H:%M:%S') %></td>
+  <td><%= run.date %></td>
+  <td><%= link_to 'edit', edit_run_path(run.id) %></td>
+</tr>

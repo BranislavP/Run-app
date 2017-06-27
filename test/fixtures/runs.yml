@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance: 1
+  duration: 2017-06-27 10:57:21
+  date: 2017-06-27 10:57:21
+
+two:
+  distance: 1
+  duration: 2017-06-27 10:57:21
+  date: 2017-06-27 10:57:21
